@@ -28,11 +28,7 @@ const developer ={
   timeSpent: "10 weeks",
 
 }
-;
-
-
-
-console.log(developer);
+;console.log(developer);
 
 let application,[bug,...code]= ["bug", "code", "code", "code", "code", "code", "code", "code", "code"];
 let [head,rest]=[...bug,code];
