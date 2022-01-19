@@ -1,7 +1,3 @@
-function double(number) {
-  return number * 2;
-}
-
 function mapLoop(numbers, double) {
   let resultToCommit = [];
   for (let i = 0; i < numbers.length; i++) {
@@ -11,7 +7,6 @@ function mapLoop(numbers, double) {
   return resultToCommit;
 }
 
-mapLoop([1, 2, 3, 4], double);
 // Code the function here.}}
 
 // Do not remove the following lines, it is for tests
