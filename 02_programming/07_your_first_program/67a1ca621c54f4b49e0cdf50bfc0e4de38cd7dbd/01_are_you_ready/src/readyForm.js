@@ -6,7 +6,7 @@ const reader = readline.createInterface({
 
 const readyForm = (reader) => {
   reader.question("Hello user!\nAre you ready for today ??!\n", (today) => {
-    console.log(`WOW ${today} ??!! Really Nice! Let's goo !!`);
+    console.log(`WOW ${today}??!! Really Nice! Let's goo !!`);
     reader.close();
   });
 };
