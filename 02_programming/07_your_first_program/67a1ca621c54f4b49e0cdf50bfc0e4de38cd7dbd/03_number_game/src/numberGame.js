@@ -1,29 +1,38 @@
-function numberGame(reader) {
-  reader.question("\nWelcome!\n\nYou have to find the right number, between 1 and 100!\nGood Luck!\n\n", (number) => {
-    let random = Math.floor(Math.random()) * 100;
+function numberGame(reader, min = 1, max = 100) {
+  //("\nWelcome!\n\nYou have to find the right number, between 1 and 100!\nGood Luck!\n\n");
+  //reader.close();
+  let random = Math.floor(Math.random() * (max - min) + 1) + min;
+
+  function beBack() {
+    reader.question("\nEnter a number\n", reponse);
+  }
+
+  function reponse(number) {
     if (number === random) {
       console.log("You Won!");
-    } else if (number > random) {
-      console.log("Too High");
-      beBack(reader, "");
-    } else if (number < random) {
-      console.log("Too Low");
-      beBack(reader, "");
-    } else {
-      console.log("This is not a number");
-      beBack(reader, "");
+      reader.close;
     }
-
-    //reader.close();
-  });
-}
-
-function beBack(reader, numberTwo) {
-  reader.question(
-    console.log("Try again", (numberTwo) => {
-      console.log("...");
-    }),
-  );
+    if (number > random) {
+      console.log("Too high");
+    }
+    if (number === min) {
+      console.log("You Won!");
+    }
+    if (number === max) {
+      console.log("You Won!");
+    }
+    if (number < random) {
+      console.log("Too Low");
+    }
+    if (number < min || number > max) {
+      console.log("The number is between 1 and 100");
+    }
+    if (isNaN(number) === true) {
+      console.log("This is not a number\n");
+    }
+    beBack();
+  }
+  beBack();
 }
 
 module.exports = numberGame;
