@@ -1,8 +1,8 @@
 const arraysIntoObjects = (keysArray, valuesArray) => {
   if (valuesArray[0] === keysArray[0]);
   return {
-    job: valuesArray[1],
     name: valuesArray[0],
+    job: valuesArray[1],
   };
 };
 
