@@ -64,7 +64,7 @@ function ShiFumi() {
   });
   function StartGameAlone() {
     reader.question("Comment t'appelles-tu ?\n\n>", (PlayerAlone) => {
-      if (PlayerAlone !== "") {
+      if (PlayerAlone === "") {
         console.log("                                                                             ");
         console.log(`\nBonjour,${PlayerAlone}\n\n    \ud83d\ude0e\n\n    VS\n    \n    \ud83e\udd16\n\n Terminator\n`);
         console.log("                                                                             ");
