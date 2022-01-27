@@ -1,5 +1,5 @@
 const humanFactory = (humanData = {}) => {
-  humanData = {
+  const ht = {
     toString: function () {
       return "something";
     },
