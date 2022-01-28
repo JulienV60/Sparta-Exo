@@ -1,4 +1,5 @@
 import readline from "readline";
+import moment from "moment";
 import { Add } from "./add.js";
 import { Acces } from "./Acces.js";
 const reader = readline.createInterface({
@@ -6,7 +7,17 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-let listOfCustomers = [];
+let listOfCustomers = [
+  {
+    FirstName: "John",
+    LastName: "Doe",
+    Email: "John.Doe@gmail.com",
+    Birthdate: "21/02/1832",
+    City: "Texas",
+    Country: "USA",
+  },
+];
+
 console.log("Welcome");
 console.log("*******************************************************\n");
 Accueil();

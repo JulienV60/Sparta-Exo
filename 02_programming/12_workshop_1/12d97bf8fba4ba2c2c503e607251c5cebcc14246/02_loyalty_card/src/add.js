@@ -20,6 +20,7 @@ function Add(reader, listOfCustomers) {
             reader.question("\ud83e\udd16 - country:> \n> ", (country) => {
               customer.Country = country;
               listOfCustomers.push(customer);
+
               Accueil(reader);
             });
           });
