@@ -1,9 +1,5 @@
-function putLitersOfCoffee(litersOfCoffee) {
-  this.litersOfCoffee = this.litersOfCoffee + litersOfCoffee;
-}
+function putLitersOfCoffee(liter) {}
 
-function consumeLitersOfCoffee(litersOfCoffee) {
-  this.litersOfCoffee = this.litersOfCoffee - litersOfCoffee;
-}
+function consumeLitersOfCoffee(liter) {}
 
 export { putLitersOfCoffee, consumeLitersOfCoffee };

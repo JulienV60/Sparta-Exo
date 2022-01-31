@@ -1,10 +1,9 @@
-// There should be no import in this file. Only exports!
-function expresso(litersOfCoffee) {
-  return litersOfCoffee - 0.08;
-}
-function longCoffee(litersOfCoffee) {
-  litersOfCoffee - 0.15;
-  console.log(litersOfCoffee);
+function longCoffee(liter) {
+  return this.serveACup(0.15);
 }
 
-export { expresso, longCoffee };
+function expresso(liter) {
+  return this.serveACup(0.08);
+}
+
+export { longCoffee, expresso };
