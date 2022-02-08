@@ -1,0 +1,13 @@
+{
+  "name": "03_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "open html-resume/index.html",
+    "test": "echo 'No tests for today, you need to see what it looks like!'"
+  },
+  "sparta": {
+    "reverseTestIgnore": true
+  }
+}
