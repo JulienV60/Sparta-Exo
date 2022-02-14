@@ -9,7 +9,7 @@ function weatherByCity(city: string) {
         return console.error(error);
       } else {
         const json = JSON.parse(html);
-        console.log(json.main.temp + " °C");
+        return console.log(json.main.temp + " °C");
       }
     },
   );

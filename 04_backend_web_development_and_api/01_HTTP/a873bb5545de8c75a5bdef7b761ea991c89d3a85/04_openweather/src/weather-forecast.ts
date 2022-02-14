@@ -9,12 +9,7 @@ function weatherByZipcode(zipcode: string, countryCode: string) {
         return console.error(error);
       } else {
         const json = JSON.parse(html);
-        console.log(
-          `Weather for ${json.city.name}`,
-          json.list[0].dt_txt,
-          json.list[0].main.temp,
-          json.list[0].weather[0].main,
-        );
+        console.log(json);
       }
     },
   );
@@ -28,7 +23,7 @@ function weatherByLatitudeAndLongitude(latitude: number, longitude: number) {
         return console.error(error);
       } else {
         const json = JSON.parse(html);
-        console.log("Weather for ");
+        return console.log("Weather for " + json.city.name);
       }
     },
   );
