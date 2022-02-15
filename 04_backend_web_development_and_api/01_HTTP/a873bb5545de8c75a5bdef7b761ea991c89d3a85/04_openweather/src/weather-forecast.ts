@@ -9,8 +9,11 @@ function weatherByZipcode(zipcode: string, countryCode: string) {
         return console.error(error);
       } else {
         const json = JSON.parse(html);
-        console.log(json.city.name);
-        console.log(json.list[0].main.temp);
+        console.log("Weather for " + json.city.name);
+        const data = json.list[0].dt_txt;
+        const resultdata = data.split("");
+
+        console.log(resultdata);
       }
     },
   );
