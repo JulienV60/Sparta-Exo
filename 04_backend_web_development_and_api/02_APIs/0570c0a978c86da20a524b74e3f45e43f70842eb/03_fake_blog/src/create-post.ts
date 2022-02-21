@@ -3,7 +3,7 @@ import "dotenv/config";
 
 function createPost(title: string, author: string) {
   request(
-    `http://${process.env.HOST}/posts`,
+    `http://${process.env.HOST}`,
     {
       method: "POST",
       body: JSON.stringify({ title, author }),
