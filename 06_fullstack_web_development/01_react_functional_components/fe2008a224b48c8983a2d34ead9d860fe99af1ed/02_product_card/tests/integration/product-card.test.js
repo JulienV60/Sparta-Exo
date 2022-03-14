@@ -10,9 +10,7 @@ const productToProps = (product) => {
   return {
     headerProps: {
       name: product.name,
-      platformLogos: product.platforms.map(
-        (platform) => platform.platform_logo.url,
-      ),
+      platformLogos: product.platforms.map((platform) => platform.platform_logo.url),
     },
     bodyProps: {
       cover: product.cover.url,
@@ -85,9 +83,7 @@ describe("React Product Card", () => {
 
       const { headerProps: minecraftHeaderProps } = productToProps(minecraft);
 
-      const MinecraftCardHeaderDOM = mount(
-        <CardHeader {...minecraftHeaderProps} />,
-      );
+      const MinecraftCardHeaderDOM = mount(<CardHeader {...minecraftHeaderProps} />);
 
       const images = MinecraftCardHeaderDOM.find("img");
       expect(images).toHaveLength(3);

@@ -1,7 +1,11 @@
 import React from "react";
 
-const CardFooter = () => {
-  return <div />;
+const CardFooter = (props) => {
+  return (
+    <div>
+      <a href={`games/${props.slug}`}></a>
+    </div>
+  );
 };
 
 export default CardFooter;
