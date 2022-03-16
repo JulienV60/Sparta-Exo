@@ -53,7 +53,6 @@ const ContactForm = () => {
   return (
     <div>
       <form>
-        <label>First Name</label>
         <input
           className=".form-control"
           id="first-name"
@@ -63,21 +62,12 @@ const ContactForm = () => {
         ></input>
         {showFirstName}
 
-        <label>Last Name</label>
-        <input
-          className=".form-control"
-          id="last-name"
-          ontype="text"
-          onChange={lastName}
-          placeholder="Last Name"
-        ></input>
+        <input className=".form-control" id="last-name" type="text" onChange={lastName} placeholder="Last Name"></input>
         {showLastName}
 
-        <label>Email </label>
         <input className=".form-control" id="email" type="text" onChange={email} placeholder="Email"></input>
         {showEmail}
 
-        <label>Message </label>
         <input className=".form-control" id="message" type="text" onChange={message} placeholder="Message"></input>
         {showMessage}
 
